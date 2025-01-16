@@ -1,4 +1,25 @@
 {
+  "application/appinstaller": {
+    "compressible": false,
+    "extensions": ["appinstaller"],
+    "sources": [
+      "https://learn.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web"
+    ]
+  },
+  "application/appx": {
+    "compressible": false,
+    "extensions": ["appx"],
+    "sources": [
+      "https://learn.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web"
+    ]
+  },
+  "application/appxbundle": {
+    "compressible": false,
+    "extensions": ["appxbundle"],
+    "sources": [
+      "https://learn.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web"
+    ]
+  },
   "application/bdoc": {
     "compressible": false,
     "extensions": ["bdoc"],
@@ -11,18 +32,11 @@
   "application/dart": {
     "compressible": true
   },
-  "application/dash+xml": {
-    "extensions": ["mpd"],
-    "sources": [
-      "https://www.iana.org/assignments/media-types/application/dash+xml"
-    ]
-  },
   "application/ecmascript": {
     "compressible": true,
-    "extensions": ["es"],
     "sources": [
-      "http://tools.ietf.org/rfc/rfc4329.txt",
-      "http://www.iana.org/assignments/media-types/application/ecmascript"
+      "https://tools.ietf.org/rfc/rfc4329.txt",
+      "https://www.iana.org/assignments/media-types/application/ecmascript"
     ]
   },
   "application/edi-x12": {
@@ -46,21 +60,17 @@
   "application/geo+json": {
     "extensions": ["geojson"],
     "sources": [
-      "http://tools.ietf.org/rfc/rfc7946.txt",
-      "http://www.iana.org/assignments/media-types/application/geo+json"
+      "https://tools.ietf.org/rfc/rfc7946.txt",
+      "https://www.iana.org/assignments/media-types/application/geo+json"
     ]
   },
   "application/gzip": {
-    "compressible": false,
-    "extensions": ["gz"],
-    "sources": [
-      "https://tools.ietf.org/html/rfc6713#section-3"
-    ]
+    "compressible": false
   },
   "application/hjson": {
     "extensions": ["hjson"],
     "sources": [
-      "https://hjson.org/rfc.html#rfc.section.1.3"
+      "https://hjson.github.io/rfc.html#rfc.section.1.3"
     ]
   },
   "application/java-archive": {
@@ -74,11 +84,7 @@
   },
   "application/javascript": {
     "charset": "UTF-8",
-    "compressible": true,
-    "extensions": ["mjs"],
-    "sources": [
-      "https://tools.ietf.org/html/draft-bfarias-javascript-mjs-00"
-    ]
+    "compressible": true
   },
   "application/json": {
     "charset": "UTF-8",
@@ -88,13 +94,8 @@
   "application/json5": {
     "extensions": ["json5"]
   },
-  "application/ld+json": {
-    "extensions": ["jsonld"]
-  },
   "application/manifest+json": {
     "charset": "UTF-8",
-    "compressible": true,
-    "extensions": ["webmanifest"],
     "sources": [
       "http://w3c.github.io/manifest/#h-media-type-registration"
     ]
@@ -102,19 +103,27 @@
   "application/mp4": {
     "extensions": ["m4p"]
   },
+  "application/msix": {
+    "compressible": false,
+    "extensions": ["msix"],
+    "sources": [
+      "https://learn.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web"
+    ]
+  },
+  "application/msixbundle": {
+    "compressible": false,
+    "extensions": ["msixbundle"],
+    "sources": [
+      "https://learn.microsoft.com/en-us/windows/msix/app-installer/installing-windows10-apps-web"
+    ]
+  },
   "application/msword": {
     "compressible": false
   },
-  "application/n-quads": {
-    "extensions": ["nq"],
+  "application/node": {
+    "extensions": ["cjs"],
     "sources": [
-      "https://www.iana.org/assignments/media-types/application/n-quads"
-    ]
-  },
-  "application/n-triples": {
-    "extensions": ["nt"],
-    "sources": [
-      "https://www.iana.org/assignments/media-types/application/n-triples"
+      "https://www.iana.org/assignments/media-types/application/node"
     ]
   },
   "application/octet-stream": {
@@ -133,6 +142,12 @@
   "application/pgp-encrypted": {
     "compressible": false
   },
+  "application/pgp-keys": {
+    "extensions": ["asc"],
+    "sources": [
+      "http://www.iana.org/assignments/media-types/application/pgp-keys"
+    ]
+  },
   "application/postscript": {
     "compressible": true
   },
@@ -145,7 +160,7 @@
   },
   "application/rdf+xml": {
     "compressible": true,
-    "extensions": ["rdf","owl"],
+    "extensions": ["owl"],
     "notes": "OWL 1 recommends using '.rdf' or '.owl' as extensions under the 'application/rdf+xml' mime type",
     "sources": [
       "https://www.w3.org/TR/owl-ref/#MIMEType"
@@ -171,6 +186,13 @@
     ],
     "compressible": true
   },
+  "application/ubjson": {
+    "extensions": ["ubj"],
+    "sources" : [
+      "http://ubjson.org/"
+    ],
+    "compressible": false
+  },
   "application/vnd.android.package-archive": {
     "compressible": false
   },
@@ -179,12 +201,6 @@
     "extensions": ["pkpass"],
     "sources": [
       "https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/PassKit_PG/DistributingPasses.html"
-    ]
-  },
-  "application/vnd.citationstyles.style+xml": {
-    "extensions": ["csl"],
-    "sources": [
-      "https://www.iana.org/assignments/media-types/application/vnd.citationstyles.style+xml"
     ]
   },
   "application/vnd.dart": {
@@ -266,16 +282,8 @@
   "application/vnd.openxmlformats-officedocument.wordprocessingml.document": {
     "compressible": false
   },
-  "application/vnd.sun.wadl+xml": {
-    "extensions": ["wadl"],
-    "sources": [
-      "http://www.iana.org/assignments/media-types/application/vnd.sun.wadl+xml"
-    ]
-  },
   "application/wasm": {
     "compressible": true,
-    "extensions": ["wasm"],
-    "notes": "WebAssembly module",
     "sources": [
       "https://webassembly.github.io/spec/core/binary/conventions.html"
     ]
@@ -309,6 +317,18 @@
   "application/x-chrome-extension": {
     "extensions": ["crx"]
   },
+  "x-compressed": {
+    "extensions": ["rar"],
+    "notes": "Windows 11 use this mime-type for RAR files instead of application/x-rar-compressed or application/vnd.rar"
+  },
+  "x-zip-compressed": {
+    "extensions": ["zip"],
+    "sources": [
+      "https://bugs.python.org/issue41738",
+      "https://developer.mozilla.org/en-US/docs/Web/HTTP/MIME_types/Common_types"
+    ],
+    "notes": "Windows use this mime-type for Zip files instead of application/zip"
+  },
   "application/x-deb": {
     "compressible": false
   },
@@ -322,11 +342,38 @@
       "http://php.net/manual/en/faq.installation.php"
     ]
   },
+  "application/x-iwork-keynote-sffkey": {
+    "extensions": ["key"],
+    "notes": "Deprecated alias for iWorks Keynote file",
+    "sources": [
+      "https://www.iana.org/assignments/media-types/application/vnd.apple.keynote"
+    ]
+  },
+  "application/x-iwork-numbers-sffnumbers": {
+    "extensions": ["numbers"],
+    "notes": "Deprecated alias for iWorks Numbers file",
+    "sources": [
+      "https://www.iana.org/assignments/media-types/application/vnd.apple.numbers"
+    ]
+  },
+  "application/x-iwork-pages-sffpages": {
+    "extensions": ["pages"],
+    "notes": "Deprecated alias for iWorks Pages file",
+    "sources": [
+      "https://www.iana.org/assignments/media-types/application/vnd.apple.pages"
+    ]
+  },
   "application/x-java-jnlp-file": {
     "compressible": false
   },
   "application/x-javascript": {
     "compressible": true
+  },
+  "application/x-keepass2": {
+    "extensions": ["kdbx"],
+    "sources": [
+      "https://github.com/keepassx/keepassx/blob/master/share/linux/keepassx.xml"
+    ]
   },
   "application/x-latex": {
     "compressible": false
@@ -470,6 +517,12 @@
     "compressible": false,
     "extensions": ["3gpp"]
   },
+  "audio/amr": {
+    "extensions": ["amr"],
+    "sources": [
+      "https://tools.ietf.org/html/rfc4867"
+    ]
+  },
   "audio/basic": {
     "compressible": false
   },
@@ -535,11 +588,18 @@
   },
   "image/apng": {
     "compressible": false,
-    "extensions": ["apng"],
     "sources": [
       "https://wiki.mozilla.org/APNG_Specification",
       "https://en.wikipedia.org/wiki/APNG"
     ]
+  },
+  "image/avif": {
+    "compressible": false,
+    "extensions": ["avif"],
+    "sources": [
+      "https://aomediacodec.github.io/av1-avif/"
+    ],
+    "notes": "The AV1 Image File Format (AVIF) is a specification for storing images or image sequences compressed with AV1 in the HEIF file format"
   },
   "image/bmp": {
     "compressible": true,
@@ -580,7 +640,6 @@
   },
   "image/jp2": {
     "compressible": false,
-    "extensions": ["jp2","jpg2"],
     "sources": [
       "https://www.iana.org/assignments/media-types/image/jp2",
       "https://tools.ietf.org/html/rfc3745"
@@ -591,7 +650,6 @@
   },
   "image/jpm": {
     "compressible": false,
-    "extensions": ["jpm"],
     "sources": [
       "https://www.iana.org/assignments/media-types/image/jpm",
       "https://tools.ietf.org/html/rfc3745"
@@ -606,7 +664,12 @@
     ]
   },
   "image/pjpeg": {
-    "compressible": false
+    "compressible": false,
+    "extensions": ["jfif"],
+    "sources": [
+      "https://github.com/microsoft/referencesource/blob/51cf7850defa8a17d815b4700b67116e3fa283c2/System.Web/MimeMapping.cs#L212",
+      "https://mimetype.io/image/pjpeg"
+    ]
   },
   "image/png": {
     "compressible": false
@@ -621,7 +684,15 @@
   "image/vnd.adobe.photoshop": {
     "compressible": true
   },
+  "image/vnd.microsoft.icon": {
+    "notes": "Alias for image/x-icon which is compressible",
+    "compressible": true,
+    "sources": [
+      "https://www.iana.org/assignments/media-types/image/vnd.microsoft.icon"
+    ]
+  },
   "image/vnd.ms-dds" : {
+    "compressible": true,
     "extensions": ["dds"],
     "notes": "Microsoft format for storing graphical textures and cubemaps. Used in 3d engines, such as Babylon.js.",
     "sources": [
@@ -656,7 +727,10 @@
   },
   "message/rfc822": {
     "compressible": true,
+    "extensions": ["mht", "mhtml"],
     "sources": [
+      "https://mimetype.io/message/rfc822",
+      "https://github.com/microsoft/referencesource/blob/51cf7850defa8a17d815b4700b67116e3fa283c2/System.Web/MimeMapping.cs#L235-L236",
       "http://en.wikipedia.org/wiki/MIME#Multipart_subtypes"
     ]
   },
@@ -731,7 +805,11 @@
     "extensions": ["jade"]
   },
   "text/javascript": {
-    "compressible": true
+    "charset": "UTF-8",
+    "compressible": true,
+    "sources": [
+      "https://www.rfc-editor.org/rfc/rfc9239"
+    ]
   },
   "text/jsx": {
     "compressible": true,
@@ -745,11 +823,7 @@
     "extensions": ["less"]
   },
   "text/markdown": {
-    "compressible": true,
-    "extensions": ["markdown","md"],
-    "sources": [
-      "https://tools.ietf.org/html/rfc7763"
-    ]
+    "compressible": true
   },
   "text/mdx": {
     "compressible": true,
@@ -794,12 +868,6 @@
   "text/tab-separated-values": {
     "compressible": true
   },
-  "text/turtle": {
-    "charset": "UTF-8",
-    "sources": [
-      "https://www.w3.org/TR/turtle/#h3_sec-mime"
-    ]
-  },
   "text/uri-list": {
     "compressible": true
   },
@@ -809,9 +877,8 @@
   "text/vtt": {
     "charset": "UTF-8",
     "compressible": true,
-    "extensions": ["vtt"],
     "sources": [
-      "http://tools.ietf.org/html/draft-pantos-http-live-streaming-13"
+      "https://tools.ietf.org/html/draft-pantos-http-live-streaming-13"
     ]
   },
   "text/x-gwt-rpc": {
@@ -863,6 +930,7 @@
     "compressible": true
   },
   "text/yaml": {
+    "compressible": true,
     "extensions": ["yaml","yml"]
   },
   "video/mp4": {
@@ -900,6 +968,31 @@
     "compressible": true,
     "sources": [
       "https://developer.mozilla.org/en-US/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context"
+    ]
+  },
+  "application/onenote": {
+    "extensions": ["one", "onea"],
+    "sources": [
+      "https://github.com/microsoft/referencesource/blob/51cf7850defa8a17d815b4700b67116e3fa283c2/System.Web/MimeMapping.cs#L265-L266"
+    ]
+  },
+  "application/vnd.visio": {
+    "extensions": ["vsdx", "vtx"],
+    "sources": [
+      "https://mimetype.io/application/vnd.visio",
+      "https://learn.microsoft.com/en-us/office/client-developer/visio/introduction-to-the-visio-file-formatvsdx"
+    ]
+  },
+  "application/vnd.ms-visio.viewer": {
+    "extensions": ["vdx"],
+    "sources": [
+      "https://github.com/microsoft/referencesource/blob/51cf7850defa8a17d815b4700b67116e3fa283c2/System.Web/MimeMapping.cs#L379"
+    ]
+  },
+  "application/zip+dotlottie": {
+    "extensions": ["lottie"],
+    "sources": [
+      "https://dotlottie.io/structure/"
     ]
   }
 }

@@ -1,11 +1,17 @@
+/*!
+ * mime-db
+ * Copyright(c) 2014 Jonathan Ong
+ * Copyright(c) 2015-2023 Douglas Christopher Wilson
+ * MIT Licensed
+ */
+
 'use strict'
 
 /**
  * Convert these text files to JSON for browser usage.
  */
 
-var getBody = require('raw-body')
-var https = require('https')
+var got = require('got')
 var writedb = require('./lib/write-db')
 
 /**
@@ -23,15 +29,15 @@ var TYPE_LINE_REGEXP = /^\s*([\w-]+\/[\w+.-]+)((?:\s+[\w-]+)*);\s*$/gm
  */
 var URL = 'https://raw.githubusercontent.com/nginx/nginx/master/conf/mime.types'
 
-get(URL, function onResponse (err, body) {
-  if (err) throw err
+;(async function () {
+  const res = await got(URL)
 
   var json = {}
   var match = null
 
   TYPE_LINE_REGEXP.index = 0
 
-  while ((match = TYPE_LINE_REGEXP.exec(body))) {
+  while ((match = TYPE_LINE_REGEXP.exec(res.body))) {
     var mime = match[1]
 
     // parse the extensions
@@ -45,7 +51,7 @@ get(URL, function onResponse (err, body) {
   }
 
   writedb('src/nginx-types.json', json)
-})
+}())
 
 /**
  * Append an extension to an object.
@@ -74,17 +80,4 @@ function appendExtensions (obj, extensions) {
     // add extension to the type entry
     appendExtension(obj, extension)
   }
-}
-
-/**
- * Get HTTPS resource.
- */
-function get (url, callback) {
-  https.get(url, function onResponse (res) {
-    if (res.statusCode !== 200) {
-      callback(new Error('got status code ' + res.statusCode + ' from ' + URL))
-    } else {
-      getBody(res, true, callback)
-    }
-  })
 }

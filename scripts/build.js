@@ -1,3 +1,9 @@
+/*!
+ * mime-db
+ * Copyright(c) 2014 Jonathan Ong
+ * Copyright(c) 2015-2022 Douglas Christopher Wilson
+ * MIT Licensed
+ */
 
 var db = {}
 
@@ -19,7 +25,7 @@ Object.keys(mime).forEach(function (suffix) {
   var s = mime[suffix]
 
   Object.keys(db).forEach(function (type) {
-    if (type.substr(0 - suffix.length) !== suffix) {
+    if (type.slice(-suffix.length) !== suffix) {
       return
     }
 
